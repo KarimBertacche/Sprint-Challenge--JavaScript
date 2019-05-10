@@ -29,14 +29,27 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+The biggest difference between the 2 array methods is that the '.map()' method iterates over each element of any given array and returns a new array without altering the original array whereas the '.forEach()' mutates the original array after computing all iterations.
 
 2. What is the difference between a function and a method?
+A function can be declared anywhere as they are first class function so they can also be passed as parameters and nested within other functions whereas a method is a function that resides within an object and becomes the method of that object. 
 
 3. What is closure?
+Closure is defined as what variables and parameter are available within a function nested or invoked within another function scope, this function as access to is local scope variables and also to all the variables of outer function scope and global scope, even after the function as return and being executed, a closure retains a reference in memory to the lexical environment outside of his scope and can go at any time to fish those values and consume them, also because it only holds a reference to the original value, if the original value changes so does the closure reference.
 
 4. Describe the four rules of the 'this' keyword.
+The 'this' keyword as 4 different types of bindings 
+1- New binding 
+This happens when using the new keyword to create a new object from a function constructor/class, the new keyword creates within the function constructor a new empty object and assigns it to the this keyword, and at the end of the function constructor it return the this keyword which is now an object populated with key of the function constuctor and the values passed in within parenthesis when the new keyword was used, so in this case the 'this' keyword refers to the newly created object.
+2- Global binding
+This happens when a function that is invoked uses the 'this' keyword but no dot notation is used during the invokation of the function, so the 'this' now points to the global object 
+3- Implicit binding
+This happens when the 'this' keyword is used within an object method, in this case the 'this' keyword refers to the object itself.
+4- Explicit binding
+This happens when a specific context is assigned to the 'this' keyword, this is achieved using the object methods .call(this, arg1, arg2), .apply(this, []), .bind(this), the difference between those methods is that the .call() method takes as a first argument the context to be assigned to the this keyword and a set of arguments separated by commas, the .apply() method takes as a first argument the context to assign to the 'this' keyword - same as with the .call() method - with the only difference that the second argument is an array of arguments, whereas the .bind() method return a new instance of the object when used  
 
 5. Why do we need super() in an extended class?
+Using super() is the same as for the older prototype syntax saying Parent.call(this, attributes), which binds to the child the attribute of the parent constructor from which it inherit/extends.
 
 ## Project Set up
 
